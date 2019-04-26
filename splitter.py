@@ -78,8 +78,8 @@ def file_split(config):
             else:
                 size_original = turn
 
-            if size_original < 3:
-                print(file + ": Too small (data size < 3)")
+            if size_original < 2:
+                print(file + ": Too small (data size < 2)")
                 continue
 
             size_use = size_all
