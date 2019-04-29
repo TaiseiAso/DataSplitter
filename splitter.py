@@ -22,6 +22,11 @@ def file_split(config):
     if size_all < 3:
         size_all = 3
 
+    fn = config['filename']
+    fn_train = fn['train'] + "_"
+    fn_validate = fn['validate'] + "_"
+    fn_test = fn['test'] + "_"
+
     ratio = config['ratio']
     train_ratio = ratio['train']
     validate_ratio = ratio['validate']
@@ -105,7 +110,7 @@ def file_split(config):
 
             with open(os.path.join(root, file), 'r', encoding='utf-8') as f:
 
-                for i, type in enumerate(["train_", "validate_", "test_"]):
+                for i, type in enumerate([fn_train, fn_validate, fn_test]):
 
                     if size_list[i] > 0:
                         cnt = 0

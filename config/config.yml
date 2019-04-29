@@ -1,5 +1,10 @@
 size: 1000000
 
+filename:
+    train       : train
+    validate    : validate
+    test        : test
+
 ratio:
     train       : 8
     validate    : 1
